@@ -69,7 +69,7 @@ function preload() {
     const fileName = `${s}.mp3`;
     print(url + fileName);
 
-    sound = loadSound(url + fileName);
+    // sound = loadSound(url + fileName);
 }
 
 function setup() {
