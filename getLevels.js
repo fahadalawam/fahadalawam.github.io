@@ -84,7 +84,7 @@ function setup() {
     // background('#000');
     amp = new p5.Amplitude();
 
-    let laoder = document.getElementById('loader');
+    let loader = document.getElementById('loader');
     document.body.removeChild(loader);
 
     let btn_pp = document.getElementById('btn_pp');
@@ -94,16 +94,6 @@ function setup() {
     let btn_ayah = document.getElementById('btn_ayah');
     btn_ayah.disabled = false;
     btn_ayah.addEventListener('click', () => selectTime());
-
-    // button = createButton('print result');
-    // button.position(width / 2, 150);
-    // button.mousePressed(showResult);
-
-    // const rate = mySound.sampleRate();
-    // const duration = mySound.duration();
-    // const frames = mySound.frames();
-    // const peaks = mySound.getPeaks(frames / 4410);
-
 
 }
 
@@ -150,6 +140,8 @@ function selectTime() {
     }
     print(`lowest = ${lowest.c} - ${lowest.a}`)
     times.push(lowest.c);
+
+    showResult();
 }
 
 
