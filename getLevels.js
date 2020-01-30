@@ -76,16 +76,31 @@ function setup() {
 
     times.push(0);
 
-    createCanvas(600, 400);
+    // createCanvas(600, 400);
+    // background('#000');
     amp = new p5.Amplitude();
 
-    button = createButton('play/pause');
-    button.position(width / 2, 100);
-    button.mousePressed(pp);
+    // button = createButton('play/pause');
+    // button.position(width / 2, 100);
+    // button.mousePressed(pp);
 
-    button = createButton('print result');
-    button.position(width / 2, 150);
-    button.mousePressed(showResult);
+    let btn_pp = document.getElementById('btn_pp')
+    // btn_pp.id = 'btn_pp';
+    // btn_pp.innerHTML = 'play/pause';
+    // document.body.appendChild(btn_pp);
+
+    btn_pp.addEventListener('click', () => pp());
+
+    let btn_ayah = document.getElementById('btn_ayah');
+    // btn_ayah.id = 'btn_ayah';
+    // btn_ayah.innerHTML = 'add ayah';
+    // document.body.appendChild(btn_ayah);
+
+    btn_ayah.addEventListener('click', () => selectTime());
+
+    // button = createButton('print result');
+    // button.position(width / 2, 150);
+    // button.mousePressed(showResult);
 
     // const rate = mySound.sampleRate();
     // const duration = mySound.duration();
@@ -110,6 +125,26 @@ function draw() {
         if (last30.length > 30) last30.shift();
     }
 
+}
+
+function selectTime() {
+    temp = [];
+
+    print(`c = ${sound.currentTime()}`);
+    // print(last30);
+
+    for (let i = last30.length; i > 0; i--) {
+        // print(last30[i]);
+        temp.push(last30[i - 1]);
+    }
+    print(temp);
+    let lowest = { c: 0, a: 999 };
+    for (let i = 0; i < temp.length; i++) {
+        const e = temp[i];
+        if (lowest.a > e.a) lowest = e;
+    }
+    print(`lowest = ${lowest.c} - ${lowest.a}`)
+    times.push(lowest.c);
 }
 
 
