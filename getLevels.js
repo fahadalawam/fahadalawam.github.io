@@ -72,7 +72,11 @@ function preload() {
     sound = loadSound(url + fileName);
 }
 
+
+
 function setup() {
+    print(sound);
+
 
     times.push(0);
 
@@ -80,22 +84,15 @@ function setup() {
     // background('#000');
     amp = new p5.Amplitude();
 
-    // button = createButton('play/pause');
-    // button.position(width / 2, 100);
-    // button.mousePressed(pp);
+    let laoder = document.getElementById('loader');
+    document.body.removeChild(loader);
 
-    let btn_pp = document.getElementById('btn_pp')
-    // btn_pp.id = 'btn_pp';
-    // btn_pp.innerHTML = 'play/pause';
-    // document.body.appendChild(btn_pp);
-
+    let btn_pp = document.getElementById('btn_pp');
+    btn_pp.disabled = false;
     btn_pp.addEventListener('click', () => pp());
 
     let btn_ayah = document.getElementById('btn_ayah');
-    // btn_ayah.id = 'btn_ayah';
-    // btn_ayah.innerHTML = 'add ayah';
-    // document.body.appendChild(btn_ayah);
-
+    btn_ayah.disabled = false;
     btn_ayah.addEventListener('click', () => selectTime());
 
     // button = createButton('print result');
@@ -108,6 +105,14 @@ function setup() {
     // const peaks = mySound.getPeaks(frames / 4410);
 
 
+}
+
+function whileLoading(total) {
+    print('loaded: ' + total);
+}
+
+function soundReady() {
+    print('sound is ready')
 }
 
 function draw() {
