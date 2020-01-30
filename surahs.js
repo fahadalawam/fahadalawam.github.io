@@ -15,6 +15,42 @@ let s = [
         name: 'التكوير',
         id: '081'
     },
+    {
+        name: 'الانفطار',
+        id: '082'
+    },
+    {
+        name: 'المطففين',
+        id: '083'
+    },
+    {
+        name: 'الانشقاق',
+        id: '084'
+    },
+    {
+        name: 'البروج',
+        id: '085'
+    },
+    {
+        name: 'الطارق',
+        id: '086'
+    },
+    {
+        name: 'الأعلى',
+        id: '087'
+    },
+    {
+        name: 'الغاشية',
+        id: '088'
+    },
+    {
+        name: 'الفجر',
+        id: '089'
+    },
+    {
+        name: 'البلد',
+        id: '090'
+    },
 ];
 
 const urlParams = new URLSearchParams(window.location.search);
