@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<?php  header("Access-Control-Allow-Origin: *"); ?>
+
 <head>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -63,6 +66,7 @@
 </head>
 
 <body>
+
     <script src="getLevels.js"></script>
 
     <button disabled id="btn_pp">تشغيل / ايقاف</button>

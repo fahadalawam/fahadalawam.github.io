@@ -2,6 +2,7 @@
 ///<reference path="./ref/p5.d.ts" />
 
 
+
 let last30 = [];
 let times = [];
 let sound;
@@ -69,7 +70,8 @@ function preload() {
     const fileName = `${s}.mp3`;
     print(url + fileName);
 
-    sound = loadSound(url + fileName);
+    // sound = loadSound(url + fileName);
+    sound = loadSound('http://download.quranicaudio.com/quran/abdullaah_3awwaad_al-juhaynee/001.mp3');
 }
 
 
