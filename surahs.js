@@ -67,7 +67,7 @@ for (let i = 0; i < s.length; i++) {
 
 
     // a.href = `https://server13.mp3quran.net/maher/00${i}.mp3`;
-    a.href = `./player.php?url=${encodeURIComponent(url)}&s=${s[i].id}`;
+    a.href = `./player.html?url=${encodeURIComponent(url)}&s=${s[i].id}`;
     document.body.appendChild(a);
 }
 
