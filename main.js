@@ -1,15 +1,15 @@
 let r = [
     {
         name: 'ماهر المعيقلي',
-        url: 'https://www.mp3quran.net/includes/downloadmp3.php?media=https://server13.mp3quran.net/maher/'
+        url: './maher/'
     },
     {
         name: 'مشاري العفاسي',
-        url: 'https://www.mp3quran.net/includes/downloadmp3.php?media=https://server8.mp3quran.net/afs/'
+        url: './afs/'
     },
     {
         name: 'محمود خليل الحصري',
-        url: 'https://www.mp3quran.net/includes/downloadmp3.php?media=https://server13.mp3quran.net/husr/'
+        url: './husr/'
     },
 ];
 
